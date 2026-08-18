@@ -67,7 +67,7 @@
 `api_key`：
 
 ```
-请从以下仓库安装 "Give Claude Eyes" 工具：<REPO_URL>
+请从以下仓库安装 "Give Claude Eyes" 工具：https://github.com/MhwJ23/give-claude-eyes
 
 1. 克隆仓库。
 2. 运行下面的命令生成配置：
