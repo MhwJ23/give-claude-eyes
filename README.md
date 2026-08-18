@@ -71,7 +71,7 @@ Paste this into Claude Code (any surface), then answer its questions with your o
 `base_url`, `model`, and `api_key`:
 
 ```
-Please install the "Give Claude Eyes" tool from this repository: <REPO_URL>
+Please install the "Give Claude Eyes" tool from this repository: https://github.com/MhwJ23/give-claude-eyes
 
 1. Clone the repo.
 2. Generate the config by running:
