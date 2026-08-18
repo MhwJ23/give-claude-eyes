@@ -1,0 +1,14 @@
+# Local config — contains your real API key. NEVER commit it.
+config.json
+
+# Runtime state (vision mode) — rewritten by ccstart.py; hook.py defaults to auto.
+mode.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS junk
+.DS_Store
+Thumbs.db
