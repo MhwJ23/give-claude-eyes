@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Give Claude Eyes — Claude Code launcher.
+Odin's Eye — Claude Code launcher.
 
 Shows an up/down menu to choose the vision mode (auto / manual), writes mode.txt,
 then launches Claude Code. Cross-platform (Windows / macOS / Linux).
