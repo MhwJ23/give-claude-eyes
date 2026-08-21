@@ -1,3 +1,3 @@
 @echo off
-rem Give Claude Eyes launcher (Windows)
+rem Odin's Eye launcher (Windows)
 python "%~dp0ccstart.py" %*
