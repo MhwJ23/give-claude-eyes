@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Give Claude Eyes — vision extraction tool (pure visual extraction, no reasoning).
+Odin's Eye — vision extraction tool (pure visual extraction, no reasoning).
 
 Usage:
   python vision.py <image path> "<what to extract>"          # single image
@@ -157,7 +157,7 @@ def main():
         except Exception:
             pass
     ap = argparse.ArgumentParser(
-        description="Give Claude Eyes — vision extraction tool "
+        description="Odin's Eye — vision extraction tool "
                     "(works with any OpenAI-compatible vision model)"
     )
     ap.add_argument("target", help="image path or folder path")
