@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Give Claude Eyes — SessionStart hook: read mode.txt and inject the vision-mode note."""
+"""Odin's Eye — SessionStart hook: read mode.txt and inject the vision-mode note."""
 import os
 import sys
 
@@ -21,11 +21,11 @@ except Exception:
 
 if mode == "manual":
     print(
-        "[Give Claude Eyes] vision mode: MANUAL (手动) — "
+        "[Odin's Eye] vision mode: MANUAL (手动) — "
         "only call the vision tool when the user asks to identify an image."
     )
 else:
     print(
-        "[Give Claude Eyes] vision mode: AUTO (自动) — "
+        "[Odin's Eye] vision mode: AUTO (自动) — "
         "when an image is relevant, call the vision tool yourself, then analyze."
     )
