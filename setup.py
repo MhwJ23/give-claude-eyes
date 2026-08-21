@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Give Claude Eyes — config generator.
+Odin's Eye — config generator.
 
 Creates config.json (next to this script) with the user's own vision API details.
 
@@ -37,7 +37,7 @@ def main():
             stream.reconfigure(encoding="utf-8")
         except Exception:
             pass
-    ap = argparse.ArgumentParser(description="Generate config.json for Give Claude Eyes")
+    ap = argparse.ArgumentParser(description="Generate config.json for Odin's Eye")
     ap.add_argument("--base-url", dest="base_url", default=None,
                     help="vision API base URL")
     ap.add_argument("--model", default=None, help="vision model name")
@@ -53,7 +53,7 @@ def main():
         print("Use --force to overwrite, or edit it manually.", file=sys.stderr)
         sys.exit(1)
 
-    print("Give Claude Eyes — vision API config")
+    print("Odin's Eye — vision API config")
     print("(Press Enter to leave a value blank for now; you can edit config.json later.)")
     print()
 
