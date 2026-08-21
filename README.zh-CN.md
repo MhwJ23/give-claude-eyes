@@ -1,6 +1,6 @@
-# Give Claude Eyes 👀（给 Claude 装一双眼睛）
+# Odin's Eye 👁️
 
-**给 Claude Code 里任何"没有视觉能力的模型"装上眼睛。**
+**Granting Claude the all-seeing wisdom（赋予 Claude 全视的智慧）。**
 
 如果你接进 Claude Code 的模型没有视觉（比如 DeepSeek 等纯文本模型），那它**看不了
 图片**——无论你是粘贴、拖拽还是附件，都一样。这个工具补上这块短板：把图片发给
@@ -10,6 +10,17 @@
 > 🌍 适用于 **Claude Code 的 CLI、桌面 App、IDE 插件（VS Code / JetBrains）、网页版**，
 > 覆盖 **Windows / macOS / Linux**。自带 API Key 即可使用，仓库**不含任何 Key**。
 
+## 为什么是 Odin's Eye
+
+给文本模型接视觉 API 的项目已经不少，但本项目有几个刻意为之的特点：
+
+- **零依赖** —— 纯 Python 标准库，不用 Node.js、不用 `npm`、不用 `pip install`，克隆即可运行。
+- **CLI + MCP 双形态，同一套代码** —— 既可作为命令行工具，也可作为原生 MCP 服务器（`vision_describe` / `vision_batch`），无需额外安装。
+- **完整的模式系统** —— 自动/手动识图模式，配跨平台启动器、SessionStart hook、`/vision-auto` `/vision-manual` 斜杠命令。
+- **三平台启动器** —— `.bat`（Windows）、`.command`（macOS）、`.sh`（Linux）。
+- **眼睛与大脑严格分离** —— 视觉模型只负责"提取"，从不推理；判断全留给你的模型。
+- **中英双语文档** —— 英文 + 中文，MIT 许可。
+
 ---
 
 ## 工作原理
@@ -18,7 +29,7 @@
   你的 Claude Code（纯文本模型）
         │    "我看不了图" → 调用识图工具
         ▼
-  Give Claude Eyes
+  Odin's Eye
         │    把图片 + 指令用标准 OpenAI 兼容接口发出去
         ▼
   你的视觉模型（OpenAI / 豆包 / DeepSeek-VL / Kimi / 任意兼容端点）
@@ -67,7 +78,7 @@
 `api_key`：
 
 ```
-请从以下仓库安装 "Give Claude Eyes" 工具：https://github.com/MhwJ23/give-claude-eyes
+请从以下仓库安装 "Odin's Eye" 工具：https://github.com/MhwJ23/odins-eye
 
 1. 克隆仓库。
 2. 运行下面的命令生成配置：
@@ -130,9 +141,9 @@ CLI 选项：
 ```json
 {
   "mcpServers": {
-    "give-claude-eyes": {
+    "odins-eye": {
       "command": "python",
-      "args": ["/绝对路径/give-claude-eyes/mcp_server.py"]
+      "args": ["/绝对路径/odins-eye/mcp_server.py"]
     }
   }
 }
@@ -182,7 +193,7 @@ ccstart.bat
         "hooks": [
           {
             "type": "command",
-            "command": "python \"/绝对路径/give-claude-eyes/hook.py\""
+            "command": "python \"/绝对路径/odins-eye/hook.py\""
           }
         ]
       }
