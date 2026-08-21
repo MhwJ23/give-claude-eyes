@@ -1,6 +1,6 @@
-# Give Claude Eyes 👀
+# Odin's Eye 👁️
 
-**Give eyes to any text-only model in Claude Code.**
+**Granting Claude the all-seeing wisdom.**
 
 If the model behind your Claude Code has no vision (DeepSeek, and many other
 text-only LLMs), it cannot see images — no matter whether you paste, drag, or attach
@@ -12,6 +12,22 @@ then *reason* over the result.
 > and the web app** — on **Windows, macOS, and Linux**. Bring your own API key; no key
 > is bundled.
 
+## Why Odin's Eye
+
+Plenty of projects bridge a text-only model to a vision API. This one is deliberately
+different:
+
+- **Zero dependencies** — pure Python standard library. No Node.js, no `npm`, no
+  `pip install`. Clone and run.
+- **CLI + MCP, one codebase** — use it as a command-line tool or as a native MCP
+  server (`vision_describe` / `vision_batch`) without installing anything extra.
+- **Full mode system** — auto/manual vision mode with a cross-platform launcher,
+  a SessionStart hook, and `/vision-auto` / `/vision-manual` slash commands.
+- **Cross-platform launchers** — `.bat` (Windows), `.command` (macOS), `.sh` (Linux).
+- **Eyes vs. brain, strictly separated** — the vision model only *extracts*; it never
+  reasons. All judgment stays with your model.
+- **Bilingual docs** — English + Chinese, MIT licensed.
+
 ---
 
 ## How it works
@@ -20,7 +36,7 @@ then *reason* over the result.
   Your Claude Code (a text-only model)
         │   "I can't see images" → calls the vision tool
         ▼
-  Give Claude Eyes
+  Odin's Eye
         │   sends image + instruction over a standard OpenAI-compatible API
         ▼
   Your vision model (OpenAI / 豆包 / DeepSeek-VL / Kimi / any compatible endpoint)
@@ -71,7 +87,7 @@ Paste this into Claude Code (any surface), then answer its questions with your o
 `base_url`, `model`, and `api_key`:
 
 ```
-Please install the "Give Claude Eyes" tool from this repository: https://github.com/MhwJ23/give-claude-eyes
+Please install the "Odin's Eye" tool from this repository: https://github.com/MhwJ23/odins-eye
 
 1. Clone the repo.
 2. Generate the config by running:
@@ -136,9 +152,9 @@ Configure it as a stdio server. Either run `/mcp` in Claude Code, or add a
 ```json
 {
   "mcpServers": {
-    "give-claude-eyes": {
+    "odins-eye": {
       "command": "python",
-      "args": ["/absolute/path/to/give-claude-eyes/mcp_server.py"]
+      "args": ["/absolute/path/to/odins-eye/mcp_server.py"]
     }
   }
 }
@@ -192,7 +208,7 @@ hook that runs `hook.py` (it reads `mode.txt` and prints the mode). In
         "hooks": [
           {
             "type": "command",
-            "command": "python \"/absolute/path/to/give-claude-eyes/hook.py\""
+            "command": "python \"/absolute/path/to/odins-eye/hook.py\""
           }
         ]
       }
