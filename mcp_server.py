@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Give Claude Eyes — MCP (Model Context Protocol) server.
+Odin's Eye — MCP (Model Context Protocol) server.
 
 Exposes vision tools so a text-only Claude Code model can "see" images through any
 OpenAI-compatible vision API. Zero-dependency; speaks newline-delimited JSON-RPC 2.0
@@ -19,7 +19,7 @@ sys.path.insert(0, HERE)
 
 import vision  # noqa: E402
 
-SERVER_NAME = "give-claude-eyes"
+SERVER_NAME = "odins-eye"
 SERVER_VERSION = "1.0.0"
 
 TOOLS = [
